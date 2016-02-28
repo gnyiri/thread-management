@@ -1,7 +1,10 @@
 /*!
- * \file producer-consumer.hxx
+ * \file thread-manager.hxx
  * \author gergely.nyiri@gmail.com
  */
+
+#ifndef _THREAD_MANAGER_HXX_
+#define _THREAD_MANAGER_HXX_
 
 #include <pthread.h>
 #include <fstream>
@@ -22,7 +25,7 @@ namespace gtm
     /*!
      * \brief DTOR
      */
-    virtual ~thread_manager();
+    virtual ~thread_manager() = 0;
     /*!
      * \brief log
      */
@@ -32,5 +35,11 @@ namespace gtm
      * \brief log file
      */
     std::ofstream m_logfile;
+    /*!
+     * \brief log mutex
+     */
+    pthread_mutex_t m_log_mtx;
   };
 }
+
+#endif

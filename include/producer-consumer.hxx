@@ -3,8 +3,10 @@
  * \author gergely.nyiri@gmail.com
  */
 
-#include <pthread.h>
-#include <fstream>
+#ifndef _THREAD_MANAGER_HXX_
+#define _THREAD_MANAGER_HXX_
+
+#include "thread-manager.hxx"
 
 namespace gtm
 {
@@ -12,7 +14,7 @@ namespace gtm
    * \class producer_consumer
    * \brief producer/consumer model
    */
-  class producer_consumer
+  class producer_consumer : thread_manager
   {
   public:
     /*!
@@ -23,18 +25,8 @@ namespace gtm
      * \brief DTOR
      */
     virtual ~producer_consumer();
-    /*!
-     * \brief log
-     */
-    void log(const char* p_msg, ...);
   private:
-    /*!
-     * \brief log file
-     */
-    std::ofstream m_logfile;
-    /*!
-     * \brief log mutex
-     */
-    pthread_mutex_t m_log_mtx;
   };
 }
+
+#endif
