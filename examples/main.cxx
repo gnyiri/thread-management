@@ -3,6 +3,6 @@
 
 int main()
 {
-  gtm::producer_consumer l_pc(1, 1);
+  gtm::producer_consumer l_producer_consumer(1, 1);
   return 0;
 }
