@@ -3,8 +3,8 @@
  * \author gergely.nyiri@gmail.com
  */
 
-#ifndef _THREAD_MANAGER_HXX_
-#define _THREAD_MANAGER_HXX_
+#ifndef _PRODUCER_CONSUMER_HXX_
+#define _PRODUCER_CONSUMER_HXX_
 
 #include "thread-manager.hxx"
 

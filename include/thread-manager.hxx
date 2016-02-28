@@ -8,9 +8,19 @@
 
 #include <pthread.h>
 #include <fstream>
+#include <iostream>
+#include <stdexcept>
 
 namespace gtm
 {
+  class thread_exception : public std::exception
+  {
+  public:
+    explicit thread_exception(const std::string& p_what)
+    {
+      std::cout << "Exception! Details: " << p_what << std::endl;
+    }
+  };
   /*!
    * \class thread_manager
    * \brief thread manager base class
