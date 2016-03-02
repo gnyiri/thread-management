@@ -9,25 +9,11 @@
 #include <pthread.h>
 #include <fstream>
 #include <iostream>
-#include <stdexcept>
+
+#include "thread-utils.hxx"
 
 namespace gtm
 {
-  /*!
-   * \class thread_exception
-   * \brief exception class
-   */
-  class thread_exception : public std::exception
-  {
-  public:
-    /*!
-     * \brief CTOR
-     */
-    explicit thread_exception(const std::string& p_what)
-    {
-      std::cout << "Exception! Details: " << p_what << std::endl;
-    }
-  };
   /*!
    * \class thread_manager
    * \brief thread manager base class

@@ -4,6 +4,7 @@ project(producer-consumer)
 
 set(producer-consumer-sources
   ../common/thread-manager.cxx
+  ../common/thread-utils.cxx
   producer-consumer.cxx
 )
 
